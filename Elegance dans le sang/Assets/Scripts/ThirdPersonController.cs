@@ -109,7 +109,7 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
-
+        public bool hasKey = false;
         private bool IsCurrentDeviceMouse
         {
             get
