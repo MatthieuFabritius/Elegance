@@ -18,13 +18,13 @@ public class ChangeColor : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(changeColorKey))
+      //  if (Input.GetKeyDown(changeColorKey))
         {
-            renderer.material.color = newColor;
+     //       renderer.material.color = newColor;
         }
-        if (Input.GetKeyUp(changeColorKey))
+     //   if (Input.GetKeyUp(changeColorKey))
         {
-            renderer.material.color = initialColor;
+      //      renderer.material.color = initialColor;
         }
     }
 }
