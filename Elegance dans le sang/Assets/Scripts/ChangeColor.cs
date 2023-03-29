@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ChangeColor : MonoBehaviour
 {
-    public KeyCode changeColorKey;
     public Color newColor;
 
     private Renderer renderer;
@@ -18,13 +18,13 @@ public class ChangeColor : MonoBehaviour
 
     void Update()
     {
-      //  if (Input.GetKeyDown(changeColorKey))
+        if(Keyboard.current.fKey.wasPressedThisFrame)
         {
-     //       renderer.material.color = newColor;
+            renderer.material.color = newColor;
         }
-     //   if (Input.GetKeyUp(changeColorKey))
+        if (Keyboard.current.fKey.wasReleasedThisFrame)
         {
-      //      renderer.material.color = initialColor;
+            renderer.material.color = initialColor;
         }
     }
 }
