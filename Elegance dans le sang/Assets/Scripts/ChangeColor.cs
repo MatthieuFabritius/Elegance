@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ChangeColor : MonoBehaviour
 {
@@ -18,13 +19,13 @@ public class ChangeColor : MonoBehaviour
 
     void Update()
     {
-      //  if (Input.GetKeyDown(changeColorKey))
+       if (Keyboard.current.aKey.wasPressedThisFrame)
         {
-     //       renderer.material.color = newColor;
+           renderer.material.color = newColor;
         }
-     //   if (Input.GetKeyUp(changeColorKey))
+        if (Keyboard.current.aKey.wasReleasedThisFrame)
         {
-      //      renderer.material.color = initialColor;
+           renderer.material.color = initialColor;
         }
     }
 }
