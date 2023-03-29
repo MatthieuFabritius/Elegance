@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CinemachineTarget
   - TakeObjects
+  - Door
+  - ClosedDoor
   layers:
   - Default
   - TransparentFX
