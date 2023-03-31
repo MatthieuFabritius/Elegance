@@ -6,8 +6,10 @@ using UnityEngine.InputSystem;
 
 public class Door : MonoBehaviour
 {
+    public Animator animator;
+    public AnimationClip animationClip;
     private ThirdPersonController thirdPersonController;
-    // Start is called before the first frame update
+
     void Start()
     {
         thirdPersonController = FindObjectOfType<ThirdPersonController>();
@@ -19,7 +21,7 @@ public class Door : MonoBehaviour
         {
             if (Keyboard.current.eKey.wasReleasedThisFrame)
             {
-
+                animator.Play(animationClip.name);
             }
         }
 
@@ -31,15 +33,7 @@ public class Door : MonoBehaviour
                 {
                     thirdPersonController.hasKey = false;
                 }
-                
             }
         }
     }
-    
-
-
-
-
-
-
 }
